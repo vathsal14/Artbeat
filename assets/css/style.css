@@ -1329,45 +1329,52 @@ input[type="submit"], input[type="reset"],
   hyphens: auto;
 }
 
-/* Fix for address line breaks */
-.footer-contact p br {
-  content: ' ';
-  display: block;
-  margin: 0.3em 0;
+/* Footer contact item alignment */
+.footer-contact p {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
   line-height: 1.6;
+  color: #e0f7f5;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #e0f7f5;
+  word-break: break-word;
+  hyphens: auto;
 }
 
-/* Address line breaks for better spacing */
-.footer-contact p br {
-  content: ' ';
-  display: block;
-  margin: 0.3em 0;
-  line-height: 1.6;
+/* Style for all icons in footer contact */
+.footer-contact i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #40e0d0;
+  flex-shrink: 0;
+  font-size: 1.1em;
+  margin-top: 3px; /* Align with first line of text */
 }
 
-/* Prevent auto-linking of phone numbers and addresses */
+/* Text next to icons */
 .footer-contact p span {
-  color: inherit !important;
+  color: #e0f7f5;
   text-decoration: none !important;
   -webkit-text-fill-color: #e0f7f5;
   -webkit-tap-highlight-color: transparent;
-  display: inline;
-  vertical-align: baseline;
+  display: inline-block;
   flex: 1;
   min-width: 0;
   line-height: 1.6;
+  vertical-align: middle;
 }
 
-/* Specific style for address to ensure proper wrapping */
+/* Specific adjustments for map marker icon */
 .footer-contact p i.fa-map-marker-alt {
-  margin-top: 0.25rem; /* Slight alignment adjustment for the icon */
-}
-
-.footer-contact i {
-  width: 20px;
-  text-align: center;
-  color: #40e0d0;
-  flex-shrink: 0;
+  margin-top: 4px; /* Slightly different alignment for map pin */
 }
 
 .footer-newsletter {
