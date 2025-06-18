@@ -1354,6 +1354,15 @@ a[href^="mailto:"],
   user-select: none;
 }
 
+/* Ensure consistent footer text size */
+.footer p,
+.footer span,
+.footer a,
+.footer-contact p,
+.footer-contact span {
+  font-size: 1rem !important;
+}
+
 /* Footer contact item alignment - Desktop */
 @media (min-width: 769px) {
   .footer-contact p {
