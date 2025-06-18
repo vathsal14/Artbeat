@@ -257,9 +257,15 @@ img {
   .footer-links, 
   .footer-contact, 
   .footer-newsletter {
-    text-align: center;
-    padding: 0.5rem 0.25rem;
-    margin-bottom: 0.25rem;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-contact {
+    padding-right: 0;
   }
   
   .footer-links ul {
@@ -270,17 +276,30 @@ img {
   .footer-contact p {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    width: 100%;
+    word-break: break-word;
   }
   
   .footer-links li {
     margin: 0.4rem 0;
   }
   
-  .footer-contact p {
-    margin-bottom: 1rem;
+  .footer-contact p i {
+    margin-top: 3px; /* Better icon alignment */
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+  }
+  
+  .footer-contact p span {
+    flex: 1;
+    min-width: 0; /* Allows text to wrap properly */
   }
   
   .social-links {
