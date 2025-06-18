@@ -1282,11 +1282,17 @@ input[type="submit"], input[type="reset"],
 .footer-contact p {
   margin-bottom: 1rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.5;
+}
+
+/* Specific style for address to ensure proper wrapping */
+.footer-contact p i.fa-map-marker-alt {
+  margin-top: 0.25rem; /* Slight alignment adjustment for the icon */
 }
 
 .footer-contact i {

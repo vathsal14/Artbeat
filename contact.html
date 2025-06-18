@@ -417,15 +417,53 @@
         font-size: 2.2rem;
       }
       
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
       .contact-form,
       .contact-info-box {
         padding: 25px 20px;
       }
       
+      .contact-info-item {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+      
       .contact-icon {
-        width: 50px;
-        height: 50px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+      
+      .contact-details h3 {
         font-size: 1.2rem;
+        margin-bottom: 4px;
+      }
+      
+      .contact-details p,
+      .contact-details a {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      
+      .hours-list {
+        padding-left: 0;
+        margin-top: 5px;
+      }
+      
+      .hours-list li {
+        margin-bottom: 5px;
+      }
+      
+      .day {
+        display: inline-block;
+        min-width: 100px;
       }
     }
 
@@ -439,11 +477,38 @@
       }
       
       .contact-info-item {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: flex-start;
       }
       
       .contact-icon {
-        margin-bottom: 15px;
+        margin-right: 15px;
+        margin-bottom: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+      
+      .contact-details h3 {
+        font-size: 1.1rem;
+      }
+      
+      .contact-details p,
+      .contact-details a {
+        font-size: 0.9rem;
+      }
+      
+      .day {
+        min-width: 90px;
+      }
+      
+      .social-links {
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      .social-links a {
+        margin: 0 8px;
       }
     }
   </style>
