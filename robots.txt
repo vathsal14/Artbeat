@@ -1,5 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
-Sitemap: https://artbeatstudiohyd.vercel.app/sitemap.xml
+# Sitemaps
+Sitemap: https://vathsal14.github.io/Artbeat/sitemap.xml
+
+# Crawl-delay: 10
+# Uncomment above and set a crawl delay if needed to reduce server load
+
+# Additional rules for specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
