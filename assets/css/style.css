@@ -277,15 +277,10 @@ img {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 12px;
-    justify-content: flex-start;
-    text-align: left;
+    gap: 10px;
     margin: 0 0 1rem 0;
-    line-height: 1.6;
-    width: 100%;
-    max-width: 100%;
-    word-break: break-word;
     padding: 0 0.5rem;
+    width: 100%;
     box-sizing: border-box;
   }
   
@@ -297,31 +292,38 @@ img {
     width: 20px;
     height: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: var(--primary-color);
     font-size: 1.1em;
     flex-shrink: 0;
-    margin-top: 4px;
+    margin-top: 3px;
   }
   
   .footer-contact p span {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     flex: 1;
     min-width: 0;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #e0f7f5;
     text-decoration: none !important;
     -webkit-text-fill-color: #e0f7f5;
-    word-wrap: break-word;
+    word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    padding: 0;
+    margin: 0;
   }
 
   /* Specific adjustments for map marker icon on mobile */
   .footer-contact p i.fa-map-marker-alt {
-    margin-top: 5px;
+    margin-top: 4px;
+  }
+  
+  /* Ensure consistent alignment for all contact items */
+  .footer-contact p i.fa-phone,
+  .footer-contact p i.fa-envelope {
+    margin-top: 3px;
   }
   
   .social-links {
