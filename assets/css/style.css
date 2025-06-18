@@ -299,11 +299,22 @@ img {
   font-size: 1.1em; /* Slightly larger icons */
   }
   
+  /* Footer contact styles moved to global section */
+
   .footer-contact p span {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline;
+    vertical-align: baseline;
     flex: 1;
-    min-width: 0; /* Allows text to wrap properly */
+    min-width: 0;
+    line-height: 1.6;
+  }
+
+  /* Ensure proper spacing for address lines */
+  .footer-contact p br {
+    content: ' ';
+    display: block;
+    margin: 0.3em 0;
+    line-height: 1.6;
   }
   
   .social-links {
@@ -1310,10 +1321,28 @@ input[type="submit"], input[type="reset"],
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
-  line-height: 1.5;
-  color: #e0f7f5; /* Match other footer text color */
-  text-decoration: none !important; /* Prevent any link styling */
-  -webkit-text-fill-color: #e0f7f5; /* For iOS */
+  line-height: 1.6;
+  color: #e0f7f5;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #e0f7f5;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Fix for address line breaks */
+.footer-contact p br {
+  content: ' ';
+  display: block;
+  margin: 0.3em 0;
+  line-height: 1.6;
+}
+
+/* Address line breaks for better spacing */
+.footer-contact p br {
+  content: ' ';
+  display: block;
+  margin: 0.3em 0;
+  line-height: 1.6;
 }
 
 /* Prevent auto-linking of phone numbers and addresses */
@@ -1322,6 +1351,11 @@ input[type="submit"], input[type="reset"],
   text-decoration: none !important;
   -webkit-text-fill-color: #e0f7f5;
   -webkit-tap-highlight-color: transparent;
+  display: inline;
+  vertical-align: baseline;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.6;
 }
 
 /* Specific style for address to ensure proper wrapping */
