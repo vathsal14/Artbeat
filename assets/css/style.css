@@ -1338,6 +1338,22 @@ input[type="submit"], input[type="reset"],
   hyphens: auto;
 }
 
+/* Prevent auto-formatting of numbers and addresses */
+a[href^="tel:"],
+a[href^="mailto:"],
+.address,
+.footer-contact span {
+  color: inherit !important;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* Footer contact item alignment - Desktop */
 @media (min-width: 769px) {
   .footer-contact p {
