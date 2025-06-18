@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Artbeat Institute</title>
+  <title>Gallery - Artbeat Studio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preload" href="assets/images/logo.jpg" as="image">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -451,7 +451,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <h3>Artbeat Institute</h3>
+          <h3>Artbeat Studio</h3>
           <p>Nurturing creativity and artistic expression through quality education in visual and performing arts.</p>
           <div class="social-links">
             <a href="https://www.facebook.com/share/v/18i3nhzxcF/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -503,7 +503,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Artbeat Institute of Drawing, Painting and Music. All rights reserved.</p>
+        <p>&copy; 2025 Artbeat Studio of Drawing, Painting and Music. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -664,8 +664,14 @@
         const isMobile = window.innerWidth < 768;
         const batchSize = isMobile ? 4 : 8; // Load images in smaller batches on mobile
         
+        // List of image numbers to exclude (1-based index)
+        const excludedImages = [13, 16, 17, 26, 29, 30, 31, 34, 35, 38, 39, 40, 41, 45, 48, 49, 60, 62, 64, 68, 69, 70, 73, 76, 78, 79, 80];
+        
         // Create all items with placeholders first for instant display
         for (let i = 1; i <= count; i++) {
+          // Skip excluded images
+          if (excludedImages.includes(i)) continue;
+          
           const galleryItem = document.createElement('div');
           galleryItem.className = 'gallery-item';
           galleryItem.setAttribute('data-category', folder);
