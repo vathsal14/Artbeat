@@ -3,9 +3,16 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search
+Disallow: /*?*
+Disallow: /*.php$
+Allow: /wp-admin/admin-ajax.php
 
 # Sitemaps
-Sitemap: https://vathsal14.github.io/Artbeat/sitemap.xml
+Sitemap: https://artbeatinstitute.com/sitemap.xml
 
 # Crawl-delay: 10
 # Uncomment above and set a crawl delay if needed to reduce server load
@@ -18,4 +25,17 @@ User-agent: Bingbot
 Allow: /
 
 User-agent: Slurp
+Allow: /
+
+# Block SemrushBot
+User-agent: SemrushBot
+Disallow: /
+
+# Block AhrefsBot
+User-agent: AhrefsBot
+Disallow: /
+
+# Block MJ12Bot
+User-agent: MJ12Bot
+Disallow: /
 Allow: /
